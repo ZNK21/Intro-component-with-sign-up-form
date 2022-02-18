@@ -1,0 +1,80 @@
+@media screen and (min-width:375px) {
+
+body{
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    background-color: hsl(0, 100%, 74%) ;
+    background-image: url(../images/bg-intro-mobile.png);
+}
+.texto1{
+    font-size: 27px;
+}
+.texto2 {
+    word-spacing: 8px;
+    font-weight: 500;
+}
+.by {
+    color: hsl(246, 25%, 77%);
+    font-size: 11px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: -10px;
+}
+.by a{
+    color: hsl(0, 100%, 74%) ;
+}
+.formulario {
+    background-color: white;
+    border-radius: 5px;
+    width: 335px;
+    height: 520px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 25px auto;
+    box-shadow: 0px 8px 0px 0px #0000002e;
+}
+.try {
+    background-color: hsl(248, 32%, 49%);
+    color: white;
+    width: 335px;
+    height: 85px;
+    font-size: 16px;
+    border: 0px;
+    line-height: 25px;
+    border-radius: 5px;
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0px 6px 0px 0px hsla(248, 32%, 37%, 0.5);
+}
+.try a{
+    font-weight: 600;
+}
+input {
+    width: 280px;
+    height: 50px;
+    font-weight: 700;
+    font-size: 16px;
+}
+input::placeholder{
+    color: (darkgray);
+    position: relative;
+    left: 15px;
+}
+.claim {
+    width: 290px;
+    height: 60px;
+    background-color: hsl(154, 59%, 51%);
+    color: white;
+    border: 0px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    box-shadow: 0px 4px 0px 0px hsl(154, 59%, 39%);
+}
+
+}
