@@ -163,14 +163,19 @@ input::placeholder{
         font-size: 16px;
         position: relative;
         top: 5%;
+        border: 2px solid darkgray;
+        color: rgb(73, 73, 73);
+        box-sizing: border-box;
+        padding: 0% 10px;
+        border-radius: 5px;
     }
     input::placeholder{
         color: (darkgray);
-        position: relative;
-        left: 25px;
+        margin: 0%;
+        padding: 0% 0%;
     }
     .claim {
-        width: 87%;
+        width: 85%;
         height: 50px;
         background-color: hsl(154, 59%, 51%);
         color: white;
