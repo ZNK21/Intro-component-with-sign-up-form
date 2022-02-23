@@ -1,39 +1,55 @@
 $(function () {
 });
 
-function borderojo() {
+var x = "ok"
+function validacion() {
 
     var email = $(".email").val();
 
-    if ($(".nombre").val() == "" || null) {
-        $(".nombre").css("border", "2px solid red");
-    } else {
-        $(".nombre").css("border", "2px solid darkgray");
+    if ($(".nombre").val() === "" || null) {
+        $("input").css("border", "2px solid red");
+        x = "not";
+    } 
+    else if ($(".apellido").val() === "" || null) {
+        $("input").css("border", "2px solid red");
+        x = "not";
     }
-
-
-    if ($(".apellido").val() == "" || null) {
-        $(".apellido").css("border", "2px solid red");
-    } else {
-        $(".apellido").css("border", "2px solid darkgray");
+    else if (email === "" || null || !validateEmail($(".email").val())) {
+        $("input").css("border", "2px solid red");
+        $(".email").attr("placeholder", "Email@example.com");
+        x = "not";
     }
-
-
-    if ($(".pass").val() == "" || null) {
-        $(".pass").css("border", "2px solid red");
-    } else {
-        $(".pass").css("border", "2px solid darkgray");
+    else if ($(".pass").val() === "" || null) {
+        $("input").css("border", "2px solid red");
+        x = "not";
     }
+    else {
+        $("input").css("border", "2px solid darkgray"); 
+        x = "ok"
+    }//PROBLEMA CON EL ORDEN DE PASS Y EMAIL
 
-    if (email == "" || null || !validateEmail($(".email").val())){
-        $(".email").css("border", "2px solid red");
-        $(".email").attr("placeholder", "email@ejemplo.com");
-    }else{
-        $(".email").css("border", "2px solid darkgray");
-    }
+
+
+    
 }
+
+$(".claim").click(function () {
+    validacion();
+    if(x === "ok"){
+        $(".formulario").submit();
+        sessionStorage.setItem("user", ($(".nombre").val()))
+        sessionStorage.setItem("mail", ($(".email").val()))
+        $(".formulario").trigger("reset");
+    }
+    else{
+        alert("Revisa los datos ingresados")
+    }
+
+
+
+});
 
 function validateEmail(email) {
     var re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return re.test(email);
-    }
+}
